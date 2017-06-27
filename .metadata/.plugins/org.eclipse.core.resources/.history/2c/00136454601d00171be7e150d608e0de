@@ -1,0 +1,88 @@
+/**
+ * 
+ */
+package cs2114.mazesolver;
+
+
+/**
+ * @author Romeo
+ * @version 2017/30/03
+ */
+public class Maze implements IMaze {
+    private MazeCell[][] maze;
+    private int size;
+    
+    
+    @Override
+    public int size() {
+        return this.size;
+    }
+    
+    /**
+     * @param size of the maze
+     * Constructor of the Maze
+     */
+    public Maze(int size) {
+        this.size = size;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; i++) {
+                maze[i][j] = MazeCell.UNEXPLORED;
+            }
+        }
+        
+        
+    }
+
+    @Override
+    public ILocation getStartLocation() {
+        return this.
+    }
+
+    @Override
+    public void setStartLocation(ILocation location) {
+        String b = location.toString(); // changing location to String
+        int x = Character.getNumericValue(b.charAt(1));
+        int y = Character.getNumericValue(b.charAt(4));          
+        if (maze[x][y] == MazeCell.WALL) {
+            maze[x][y] = MazeCell.UNEXPLORED;
+        }
+        else {
+            //nothing happens
+        }
+    }
+
+    @Override
+    public ILocation getGoalLocation() {
+        return null;
+    }
+
+    @Override
+    public void setGoalLocation(ILocation location) {
+        String b = location.toString(); // changing location to String
+        int x = Character.getNumericValue(b.charAt(1));
+        int y = Character.getNumericValue(b.charAt(4));
+        if (maze[x][y] == MazeCell.WALL) {
+            maze[x][y] = MazeCell.UNEXPLORED;
+        }
+        else {
+            //nothing happens
+        }
+    }
+
+    @Override
+    public MazeCell getCell(ILocation location) {
+        
+    }
+
+    @Override
+    public void setCell(ILocation location, MazeCell cell) {
+        if ()
+    }
+
+    @Override
+    public String solve() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+}

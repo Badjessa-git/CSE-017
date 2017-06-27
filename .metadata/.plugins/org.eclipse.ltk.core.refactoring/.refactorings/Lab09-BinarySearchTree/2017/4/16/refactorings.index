@@ -1,0 +1,8 @@
+1492703776353	Encapsulate field 'fname'
+1492703781460	Encapsulate field 'lname'
+1492703800807	Encapsulate field 'phone'
+1492789288847	Encapsulate field 'phone'
+1492789304387	Encapsulate field 'firstName'
+1492789327216	Encapsulate field 'lastName'
+1492790237466	Rename local variable 'arg0'
+1492791628153	Rename field 'test1'

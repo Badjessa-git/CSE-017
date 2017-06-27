@@ -1,0 +1,69 @@
+import java.util.EmptyStackException;
+import java.util.LinkedList;
+
+//-------------------------------------------------------------------------
+/**
+ * An implementation of the stack data type that uses a linked chain of
+ * {@code Node<E>} objects to store its contents.
+ *
+ * This is a PARTIAL IMPLEMENTATION that needs completion.
+ *
+ * @param <E>
+ *            the type of elements stored in the stack
+ *
+ * @author Tony Allevato (authored class skeleton)
+ * @author Your name (pid)
+ * @version (place the date here, in this format: yyyy.mm.dd)
+ */
+public class LinkedStack<E> implements StackInterface<E> {
+    // ~ Fields ...............................................................
+    private int size;
+    private Node<E> front;
+
+    // ~ Constructors .........................................................
+
+    // ----------------------------------------------------------
+    /**
+     * Constructor for LinkedStack
+     */
+    public LinkedStack() {
+        front = new Node<E>(null);
+        this.size = 0;
+    }
+
+    // ~ Methods ..............................................................
+
+    // ----------------------------------------------------------
+    @Override
+    public void push(E item) {
+        E it = front.data();
+        Node<E> next = new Node<E>(null);
+        next = front.next();
+        next.setData(it);
+        front.setData(item);
+        front.join(next);
+        size++;
+    }
+
+    // ----------------------------------------------------------
+    @Override
+    public void pop() {
+        if (this.isEmpty()) {
+            throw new EmptyStackException();
+        }
+        front.split();
+        size--;
+    }
+
+    // ----------------------------------------------------------
+    @Override
+    public E peek() {
+        return front.data();
+    }
+
+    // ----------------------------------------------------------
+    @Override
+    public boolean isEmpty() {
+        return size == 0;
+    }
+}

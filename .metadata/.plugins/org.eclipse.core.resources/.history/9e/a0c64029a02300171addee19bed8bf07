@@ -1,0 +1,55 @@
+import student.*;
+/**
+ * @author Romeo
+ * @version 2017/15/4
+ * @param <T> 
+ */
+public class BinaryTreeTest<T> extends TestCase{
+    private BinaryTree<Integer> test;
+    
+    
+    public void setUp() {    
+        test = new BinaryTree<Integer>(0);
+    }
+    
+    public void testClone() {
+        BinaryTree<Integer> cl = new BinaryTree<Integer>(1);
+        BinaryTree<Integer> cr = new BinaryTree<Integer>(2);
+        test.setLeft(cl);
+        test.setRight(cr);
+        BinaryTree<Integer> b = test.clone();
+        assertEquals(b.getElement(), test.getElement());
+        assertEquals(b.getLeft(), test.getLeft());
+        assertEquals(b.getRight(), test.getRight());
+        
+    }
+    
+    public void testSize() {
+        assertEquals(1, test.size());
+        BinaryTree<Integer> cl = new BinaryTree<Integer>(1);
+        BinaryTree<Integer> cr = new BinaryTree<Integer>(2);
+        test.setLeft(cl);
+        test.setRight(cr);
+        assertEquals(3, test.size());
+        
+    }
+    
+    public void testHeight() {
+        assertEquals(1, test.height());
+        BinaryTree<Integer> cl = new BinaryTree<Integer>(1);
+        BinaryTree<Integer> cr = new BinaryTree<Integer>(2);
+        test.setLeft(cl);
+        test.setRight(cr);
+        assertEquals(2, test.height());
+    }
+    
+    public void testToPreOrderTraversal() {
+        BinaryTree<Integer> cl = new BinaryTree<Integer>(1);
+        BinaryTree<Integer> cr = new BinaryTree<Integer>(2);
+        test.setLeft(cl);
+        test.setRight(cr);
+        cl.setLeft(new BinaryTree<Integer>(3));
+        cl.setRight(new BinaryTree<Integer>(4));
+        assertEquals("(((3) (4) 1) (2) 0)", test.toPostOrderString());
+    }
+}

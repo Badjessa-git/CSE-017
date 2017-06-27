@@ -1,0 +1,58 @@
+import student.TestCase;
+
+//-------------------------------------------------------------------------
+/**
+ * Tests for the {@link Node} class.
+ *
+ * @author  Your name (pid)
+ * @version (place the date here, in this format: yyyy.mm.dd)
+ */
+public class NodeTest
+    extends TestCase
+{
+    //~ Fields ................................................................
+
+    // TODO: Depending on how you test, you might need more, or fewer, of
+    // these.
+    private Node<String> node1;
+    private Node<String> node2;
+    private Node<String> node3;
+
+
+    //~ Public methods ........................................................
+
+    // ----------------------------------------------------------
+    /**
+     * Create some new nodes for each test method.
+     */
+    public void setUp()
+    {
+        node1 = new Node<String>("node1");
+        node2 = new Node<String>("node2");
+        node3 = new Node<String>("node3");
+    }
+
+
+    /**
+     * test method for {@link Node#join(Node)}
+     */
+    public void testJoin() {
+        assertEquals(node1, node1.join(node2));
+        assertEquals(node1, node2.previous());
+        assertEquals(node2, node1.next());
+        assertEquals(node3, node3.join(node3));
+        assertEquals(node2, node2.join(null));
+        Exception thrown = null;
+        try {
+            node1.join(node3);
+        }
+        catch (Exception e)
+        {
+            thrown = e;
+        }
+        assertTrue(thrown instanceof IllegalStateException);
+        assertEquals("Either nodes have something preceding or following them", thrown.getMessage());
+    }
+    
+    
+}

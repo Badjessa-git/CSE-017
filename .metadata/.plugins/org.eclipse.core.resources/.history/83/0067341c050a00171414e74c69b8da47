@@ -1,0 +1,205 @@
+// -------------------------------------------------------------------------
+/**
+ * A MineSweeperBoard holds a representation of the contents of the playing
+ * field for a Mine Sweeper game. The playing field is represented using a
+ * two-dimensional array of integer values. The integer value stored in each
+ * cell of the array indicates the icon which will appear in the corresponding
+ * cell of the graphical user interface for the game.
+ *
+ * Your job is to implement all the methods in this class skeleton and
+ * write a set of test cases for this class.
+ *
+ *  @author  your-pid (and partner's, if in lab)
+ *  @version (place the date here)
+ */
+public class MineSweeperBoard
+    extends MineSweeperBoardBase
+{
+    //~ Instance/static variables .............................................
+
+    /*# You provide these */
+
+
+    //~ Constructors ..........................................................
+
+    // ----------------------------------------------------------
+    /**
+     * Construct a new MineSweeperBoard with the given dimensions.
+     *
+     * @param rows     the number of rows on the board
+     * @param cols     the number of columns on the board
+     * @param numMines the number of mines to place on the board
+     */
+    public MineSweeperBoard( int rows, int cols, int numMines)
+    {
+        /*# Use a two-dimensional array to represent the board.
+         *  After creating the array, clear it, and then place
+         *  mines on it.
+         */
+    }
+
+
+    //~ Methods ...............................................................
+
+    // ----------------------------------------------------------
+    /**
+     * Get the contents of the specified cell on this MineSweeperBoard. The
+     * value returned from this method must be one of the defined constants
+     * (COVERED_CELL, MINE, FLAG, FLAGGED_MINE, UNCOVERED_MINE) or a
+     * non-negative integer representing the number of mines adjacent to the
+     * cell.
+     *
+     * @param row the row containing the cell (starting at zero)
+     * @param col the column containing the cell (starting at zero)
+     * @return the value contained in the cell specified by row and col, or
+     *         INVALID_CELL if the specified cell does not exist
+     */
+    public int getCell( int row, int col )
+    {
+        /*# Implement this */
+    }
+
+
+    // ----------------------------------------------------------
+    /**
+     * Get the number of columns in this MineSweeperBoard.
+     *
+     * @return the number of columns in this MineSweeperBoard
+     */
+    public int getColumns()
+    {
+        /*# Implement this */
+    }
+
+
+    // ----------------------------------------------------------
+    /**
+     * Get the number of rows in this MineSweeperBoard.
+     *
+     * @return the number of rows in this MineSweeperBoard
+     */
+    public int getRows()
+    {
+        /*# Implement this */
+    }
+
+
+    // ----------------------------------------------------------
+    /**
+     * Place or remove a flag from the specified cell. If the cell is currently
+     * covered then place a flag on the cell.  If the cell currently contains
+     * a flag, remove that flag but do not uncover the cell. If the cell has
+     * already been uncovered or is invalid, no change is made to the board.
+     *
+     * @param row the row of the cell to be flagged/unflagged.
+     * @param col the column of the cell to be flagged/unflagged.
+     */
+    public void flagCell( int row, int col )
+    {
+        /*# Implement this */
+    }
+
+
+    // ----------------------------------------------------------
+    /**
+     * Determine if the player has lost the current game. The game is lost if
+     * the player has uncovered a mine.  Note that this is <b>not</b> the
+     * opposite of gameWon().  Most of the time, the current game is neither
+     * lost nor won--when one of these two methods returns true, the game
+     * is over.
+     *
+     * @return true if the current game has been lost and false otherwise.
+     */
+    public boolean gameLost()
+    {
+        /*# Implement this */
+    }
+
+
+    // ----------------------------------------------------------
+    /**
+     * Determine if the player has won the current game. The game is won when
+     * three conditions are met:
+     *
+     * <OL>
+     * <li> Flags have been placed on all of the mines. </li>
+     * <li> No flags have been placed incorrectly.      </li>
+     * <li> All non-flagged cells have been uncovered.  </li>
+     * </ol>
+     *
+     * Note that this is <b>not</b> the opposite of gameLost().  Most of the
+     * time, the current game is neither lost nor won--when one of these two
+     * methods returns true, the game is over.
+     *
+     * @return true if the current game has been won and false otherwise.
+     */
+    public boolean gameWon()
+    {
+        /*# Implement this */
+    }
+
+
+    // ----------------------------------------------------------
+    /**
+     * Count the number of mines that appear in cells that  are adjacent to
+     * the specified cell.
+     *
+     * @param row the row of the cell.
+     * @param col the column of the cell.
+     * @return the number of mines adjacent to the specified cell..
+     */
+    public int numAdjMines( int row, int col )
+    {
+        /*# Implement this */
+    }
+
+
+    // ----------------------------------------------------------
+    /**
+     * Uncover all of the cells on the board.
+     */
+    public void revealBoard()
+    {
+        /*# Implement this */
+    }
+
+
+    // ----------------------------------------------------------
+    /**
+     * Uncover the specified cell. If the cell already contains a flag it
+     * should not be uncovered. If there is not a mine under the specified
+     * cell then the value in that cell is changed to the number of mines
+     * that appear in adjacent cells. If there is a mine  under the specified
+     * cell the game is over and the player has lost.  If the specified cell
+     * is already uncovered or is invalid, no change  is made to the board.
+     *
+     * @param row the row of the cell to be uncovered.
+     * @param col the column of the cell to be uncovered.
+     */
+    public void uncoverCell( int row, int col )
+    {
+        /*# Implement this */
+    }
+
+
+    //~ Protected Methods .....................................................
+
+    // ----------------------------------------------------------
+    /**
+     * Set the contents of the specified cell on this MineSweeperBoard. The
+     * value passed in should be one of the defined constants
+     * (COVERED_CELL, MINE, FLAG, FLAGGED_MINE, UNCOVERED_MINE) or a
+     * non-negative integer representing the number of mines adjacent to the
+     * cell.  This method is for internal use by the MineSweeperBoardBase
+     * and its subclasses only.
+     *
+     * @param row the row containing the cell
+     * @param col the column containing the cell
+     * @return the value to place in the cell
+     */
+    protected void setCell( int row, int col, int value )
+    {
+        /*# Implement this */
+    }
+
+}

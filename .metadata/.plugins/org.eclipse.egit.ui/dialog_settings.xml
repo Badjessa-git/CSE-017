@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="0" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<item value="C:\Users\Romeo\git\myrepository\.git" key="GitSelectRepositoryPage.lastRepository"/>
+	<list key="EGit.KnownHosts">
+		<item value="github.com"/>
+		<item value="git.eclipse.org"/>
+		<item value="bitbucket.org"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://Romeo25@bitbucket.org/ProfBrianChen/romeo25-fl2016-cse.git"/>
+		<item value="https://Romeo25@bitbucket.org/Romeo25/myrepository.git"/>
+	</list>
+	<section name="GitImportWizard">
+		<item value="true" key="GitProjectsImportPage.STORE_NESTED_PROJECTS"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="C:\Users\Romeo\git\romeo25-fl2016-cse\.git">
+			<item value="false"/>
+			<item value="Romeo &lt;Romeo@128.180.102.165&gt;"/>
+			<item value="All my work"/>
+			<item value="Romeo &lt;Romeo@128.180.102.165&gt;"/>
+			<item value="7078b655fcef28fec6903dcf586f7b430e4b292c"/>
+		</list>
+		<list key="C:\Users\Romeo\git\myrepository\.git">
+			<item value="false"/>
+			<item value="Romeo &lt;Romeo@128.180.102.165&gt;"/>
+			<item value="First commit"/>
+			<item value="Romeo &lt;Romeo@128.180.102.165&gt;"/>
+			<item value="0000000000000000000000000000000000000000"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item value="500,500" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="false" key="sortItemState"/>
+		<item value="500,500" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+	</section>
+</section>

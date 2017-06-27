@@ -1,0 +1,53 @@
+package cs2114;
+
+/**
+ * 
+ * @author Romeo
+ * @version 2017/01/4 
+ * @param <E>
+ */
+public class Lab08Deque<E> extends DoubleLinkDeque<E> {
+
+    @Override
+    public void enqueueAtFront(E value) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public E dequeueAtFront() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public void enqueueAtRear(E value) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public E dequeueAtRear() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public E frontItem() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public E rearItem() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public void clear() {
+        // TODO Auto-generated method stub
+        
+    }
+
+}

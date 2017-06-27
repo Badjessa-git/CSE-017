@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+public class SingleLinkedList<E> {
+    private Node<E> head;
+    private int size = 0;
+    //Your method will go here
+    private static class Node<E> {
+      private E data;
+      private Node<E> next;
+
+      /** Creates a new node with a null next field
+          @param dataItem  The data stored
+      */
+      private Node(E data) {
+        data = dataItem;
+        next = null;
+      }
+
+     /** Creates a new node that references another node
+          @param dataItem  The data stored
+          @param nodeRef  The node referenced by new node
+      */
+      private Node(E dataItem, Node<E> nodeRef) {
+        data = dataItem;
+        next = nodeRef;
+      }
+   }
+   
+ }
+

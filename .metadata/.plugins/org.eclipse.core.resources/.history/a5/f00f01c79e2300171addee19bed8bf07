@@ -1,0 +1,17 @@
+
+/**
+ * @author Romeo
+ * @version 2017/15/4
+ */
+public class BinaryTreeTest<T> extends student.TestCase{
+    private BinaryTree<String> test;
+    private BinaryTree<String> child1;
+    private BinaryTree<String> child2;
+    
+    public void setUp() {
+        child1 = new BinaryTree<String>("1");
+        child1 = new BinaryTree<String>("2");
+        test = new BinaryTree<String>("root", child1, child2);
+        
+    }
+}

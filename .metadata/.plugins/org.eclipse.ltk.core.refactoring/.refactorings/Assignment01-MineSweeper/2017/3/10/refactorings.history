@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;cs2114.minesweeper.MineSweeperBoard.MineSweeperBoard().minesPlace&apos; in &apos;cs2114.minesweeper.MineSweeperBoard.MineSweeperBoard()&apos; to field&#x0D;&#x0A;- Original project: &apos;Assignment01-MineSweeper&apos;&#x0D;&#x0A;- Original element: &apos;cs2114.minesweeper.MineSweeperBoard.MineSweeperBoard().minesPlace&apos;&#x0D;&#x0A;- Field name: &apos;minesPlace&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;minesPlace&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;cs2114.minesweeper{MineSweeperBoard.java" name="minesPlace" selection="578 25" stamp="1488995638977" static="false" version="1.0" visibility="2"/>
+</session>

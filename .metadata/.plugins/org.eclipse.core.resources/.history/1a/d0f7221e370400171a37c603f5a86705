@@ -1,0 +1,106 @@
+package cs2114.minesweeper;
+
+import java.util.Random;
+
+/**
+ * @author Romeo Bahoumda
+ * @author Cianni Heathers
+ * @version 3/4/2017
+ */
+public class MineSweeperBoard extends MineSweeperBoardBase {
+	
+	protected MineSweeperCell[][] board;
+	protected int width;
+	protected int height;
+	protected Random minesPlace;
+	
+	/**
+	 * Construct the board
+	 * @param width of the board
+	 * @param height of the board
+	 * @param numberOfMines to be randomly placed
+	 */
+	public MineSweeperBoard(int width, int height, int numberOfMines) {
+		this.height = height;
+		this.width = width;
+		
+		this.board = new MineSweeperCell[width][height];
+		for (int i = 0; i < width; i++){
+			for (int j = 0; i < height; j++){
+				this.board[i][j] = MineSweeperCell.COVERED_CELL;
+				this.board
+			}
+		}
+	}
+
+	@Override
+	public int width() {
+		//returning the width
+		return this.width;
+	}
+
+	@Override
+	public int height() {
+		//returning the height
+		return this.height;
+	}
+
+	@Override
+	public MineSweeperCell getCell(int x, int y) {
+		if ( x > height || y > width) {
+			return MineSweeperCell.INVALID_CELL;
+		}
+		else {
+			return board[x][y];
+		}
+		
+	}
+
+	@Override
+	public void uncoverCell(int x, int y) {
+        if (board[x][y] == MineSweeperCell.FLAG) {
+        	;
+        }
+        else if (board[x][y] != MineSweeperCell.MINE) {
+        	int s = 0;
+        	
+        }
+	}
+
+	@Override
+	public void flagCell(int x, int y) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isGameLost() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isGameWon() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int numberOfAdjacentMines(int x, int y) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void revealBoard() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void setCell(int x, int y, MineSweeperCell value) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

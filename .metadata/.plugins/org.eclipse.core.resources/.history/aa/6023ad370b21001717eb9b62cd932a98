@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+public class SingleLinkedList<E> {
+    private Node<E> head;
+    private int size = 0;
+    //Your method will go here
+    private static class Node<E> {
+      private E data;
+      private Node<E> next;
+
+      /** Creates a new node with a null next field
+          @param dataItem  The data stored
+      */
+      private Node(E data) {
+        this.data = data;
+        next = null;
+      }
+
+     /** Creates a new node that references another node
+          @param dataItem  The data stored
+          @param nodeRef  The node referenced by new node
+      */
+      private Node(E dataItem, Node<E> nodeRef) {
+        data = dataItem;
+        next = nodeRef;
+      }
+   }
+    public SingleLinkedList<E> divideInHalf() {
+
+        SingleLinkedList<E> list2 = new SingleLinkedList<E>();
+
+        int size = this.size;
+
+        for (int i = 0; i < size/2; i++) {
+
+              this.head = this.head.next;
+
+        }
+
+        for (int i = size/2; i < size-1; i++) {
+
+              E it = this.head.data;
+
+              Node<E> next = new Node<E>(null);
+
+              list2.head = new Node<E>(it, next);
+
+              this.head = head.next;
+
+    }
+   return list2;
+ }
+}

@@ -1,0 +1,86 @@
+package cs2114;
+
+/**
+ * 
+ * @author Romeo
+ * @version 2017/01/4 
+ * @param <E>
+ */
+public class Lab08Deque<E> extends DoubleLinkDeque<E> {
+    private Node<E> head;
+    private Node<E> tail;
+    
+    /**
+     * Constructor
+     */
+    public Lab08Deque() {
+        super();
+        head = tail = new Node<E>(null);
+        head.setNext(tail);
+    }
+
+    @SuppressWarnings("null")
+    @Override
+    public void enqueueAtFront(E value) {
+        Node<E> front = null;
+        front.setData(value);
+        head.setNext(front);
+        front.setNext(head.getNext().getNext());
+        size++;
+    }
+
+    @Override
+    public E dequeueAtFront() {
+        if (size == 0) {
+            return null;
+        }
+        else {
+           Node<E> temp = head.getNext();
+           Node<E> next = temp.getNext();
+           head.setNext(next);
+           size--;
+           return temp.getData();
+        }
+    }
+
+    @SuppressWarnings("null")
+    @Override
+    public void enqueueAtRear(E value) {
+        Node<E> rear = null;
+        rear.setData(value);
+        tail.setPrevious(rear);
+        rear.setPrevious(rear.getPrevious().getPrevious());
+        
+    }
+
+    @Override
+    public E dequeueAtRear() {
+        Node<E> temp = tail.getPrevious();
+        Node<E> previous = temp.getPrevious();
+        tail.setPrevious(previous);
+        size--;
+        return temp.getData();
+    }
+
+    @Override
+    public E frontItem() {
+        if (size == 0) {
+            return null;
+        }
+        return head.getNext().getData();
+    }
+
+    @Override
+    public E rearItem() {
+        if (size == 0) {
+            return null;
+        }
+        return tail.getPrevious().getData();
+    }
+
+    @Override
+    public void clear() {
+        
+    }
+
+}

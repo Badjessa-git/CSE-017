@@ -1,0 +1,9 @@
+package cs2114;
+import student.TestCase;
+public class SingleLinkedListTest extends TestCase{
+    public SingleLinkedList<E> test1;
+    
+    public void setUP() {
+        test1 = new SingleLinkedList<String>("A", "B", "C");
+    }
+}

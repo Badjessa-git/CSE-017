@@ -1,0 +1,64 @@
+package cs2114;
+import student.TestCase;
+
+/**
+ * @author Romeo
+ * @version 2017/01/04
+ *test class for {@link Lab08Deque}
+ */
+public class Lab08DequeTest extends TestCase{
+    private Lab08Deque test;
+    
+    public void setUp() {
+        test = new Lab08Deque<Object>();
+    }
+    
+    /**
+     * test method for {@link Lab08Deque#enqueueAtFront()}
+     */
+    public void testEnqueueAtFront() {
+        
+    }
+    
+    /**
+     * test method for {@link Lab08Deque#dequeueAtFront()}
+     */
+    public void testDequeueAtFront() {
+        
+    }
+    
+    /**
+     * test method for {@link Lab08Deque#enqueueAtRear(Object)}
+     */
+    public void testEnqueueAtRear() {
+        
+    }
+    
+    /**
+     * test method for {@link Lab08Deque#dequeueAtRear()}
+     */
+    public void testDequeueAtRear() {
+        
+    }
+    
+    /**
+     * test method for {@link Lab08Deque#frontItem()}
+     */
+    public void testFrontItem() {
+        
+    }
+    
+    /**
+     * test method for {@link Lab08Deque#rearItem()}
+     */
+    public void testRearItem() {
+        
+    }
+    
+    /**
+     * test method for {@link Lab08Deque#clear()}
+     */
+    public void testClear() {
+        
+    }
+}
